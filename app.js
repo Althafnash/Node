@@ -1,7 +1,7 @@
 #!/urs/bin/env node
 
 import chalk from "chalk";
-import { opreating } from "./lib/os.js";
+import { opreating } from "./lib/Home.js";
 
 welcome();
 await opreating();
