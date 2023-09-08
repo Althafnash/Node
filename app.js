@@ -1,15 +1,37 @@
 #!/urs/bin/env node
 
-import chalk from "chalk";
+import  inquirer  from "inquirer";
+import  chalk  from "chalk"
 import { opreating } from "./lib/Home.js";
+import { Help } from "./lib/Help.js"
 
 welcome();
-await opreating();
+const answer = await inquirer.prompt({
+    name: "command",
+    type: "input",
+    message: chalk.white("command : "),
+});
+const command = answer.command;
+if(command == "os"){
+    console.log(chalk.green("Opreating System Information : "))
+    await opreating();
+} 
+else if(command == "help"){
+    console.log(chalk.green("Help_--_Deck"));
+    await Help()
+}
+else if(commands == "commands"){
+    console.log(chalk.green("======================================================"))
+    console.log(chalk.green(" help -- The Help_Deck"))
+    console.log(chalk.green(" os   -- opreating system information"))
+    console.log(chalk.green("======================================================"))
+}
+
 
 
 function welcome() {
     console.log(chalk.white("Hello welcome to Nash CMD "))
-    console.log(chalk.white("Type Help to see all the commands "))
-    console.log(chalk.white("Close the window to exit"))
+    console.log(chalk.red("Type commands to see all the commands "))
+    console.log(chalk.green("Close the window to exit"))
 }
 
