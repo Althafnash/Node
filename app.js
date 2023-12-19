@@ -2,8 +2,8 @@
 
 import  inquirer  from "inquirer";
 import  chalk  from "chalk"
-import { opreating } from "./lib/Home.js";
 import { Help } from "./lib/Help.js"
+import {OS} from "./lib/Opreating sysytem.js";
 
 while(true) {
     welcome();
@@ -15,7 +15,7 @@ while(true) {
     const command = answer.command;
     if(command == "os"){
         console.log(chalk.green("Opreating System Information : "))
-        await opreating();
+        await OS();
     } 
     else if(command == "help"){
         console.log(chalk.green("Help_--_Deck"));
