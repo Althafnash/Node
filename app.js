@@ -2,7 +2,7 @@
 
 import  inquirer  from "inquirer";
 import  chalk  from "chalk"
-import { Help } from "./lib/Help.js"
+import { Help_os } from "./lib/Modules/Help_modules.js"
 import {OS} from "./lib/Opreating sysytem.js";
 
 while(true) {
@@ -19,7 +19,7 @@ while(true) {
     } 
     else if(command == "help"){
         console.log(chalk.green("Help_--_Deck"));
-        await Help()
+        await Help_os()
     }
     else if(command == "commands"){
         console.log(chalk.green("======================================================"))
